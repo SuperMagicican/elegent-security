@@ -1,0 +1,3 @@
+ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+   cn.elegent.security.common.core.CoreConfig,\
+   cn.elegent.security.common.properties.LoginProperties

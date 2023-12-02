@@ -1,0 +1,3 @@
+ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+   cn.elegent.security.token.controller.LoginController,\
+   cn.elegent.security.token.config.TokenConfigurer

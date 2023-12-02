@@ -1,0 +1,5 @@
+ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+   cn.elegent.security.verifier.config.VeriferConfigurer,\
+   cn.elegent.security.verifier.properties.SecurityProperties,\
+   cn.elegent.security.verifier.properties.HeaderProperties,\
+   cn.elegent.security.verifier.manager.DefaultAuthorizationManager

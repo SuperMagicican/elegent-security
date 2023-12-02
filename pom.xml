@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.elegent.security</groupId>
+    <artifactId>elegent-security</artifactId>
+    <packaging>pom</packaging>
+    <version>1.1.0</version>
+    <modules>
+        <module>elegent-security-common</module>
+        <module>elegent-security-token</module>
+        <module>elegent-security-verifier</module>
+        <module>elegent-security-demo</module>
+        <module>elegent-security-verifier-web</module>
+        <module>elegent-security-verifier-gateway</module>
+        <module>elegent-security-context</module>
+        <module>elegent-security-annotation</module>
+    </modules>
+
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version2.0</name>
+            <url>https://www.apache.org/licenses/</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <name>elegent-security</name>
+    <url>https://gitee.com/chuanzhiliubei/elegent-security</url>
+    <description>elegent权限框架</description>
+
+    <scm>
+        <url>http://itcast.cn</url>
+        <connection>scm:git:https://gitee.com/chuanzhiliubei/elegent-security.git</connection>
+        <developerConnection>scm:git:https://gitee.com/chuanzhiliubei/elegent-security.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>黑马刘皇叔</name>
+            <email>louyingxin@itcast.cn</email>
+            <organization>传智教育研究院</organization>
+            <organizationUrl>https://www.itcast.cn/</organizationUrl>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--elegent.version-->
+        <elegent.version>1.1.0</elegent.version>
+
+        <!--fastjson版本-->
+        <fastjson.version>1.2.83</fastjson.version>
+        <!--jjwt版本-->
+        <jjwt.version>0.9.1</jjwt.version>
+
+        <lombok.version>1.18.22</lombok.version>
+
+        <javax.xml.bind.version>2.3.0</javax.xml.bind.version>
+
+        <spring.version>5.3.26</spring.version>
+
+        <spring-boot.version>2.5.15</spring-boot.version>
+
+        <servlet.version>4.0.1</servlet.version>
+
+        <gpg.passphrase>Louyingxin_123</gpg.passphrase>
+        <gpg.keyname>6E274A2A94AA1BCFBE31FD1DDA21CF9E5996B3AA</gpg.keyname>
+        <gpg.homedir>D:/GnuPG/</gpg.homedir>
+
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${javax.xml.bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${javax.xml.bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${javax.xml.bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>1.1.1</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>cn.elegent.security</groupId>
+                <artifactId>elegent-security-common</artifactId>
+                <version>${elegent.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.elegent.security</groupId>
+                <artifactId>elegent-security-verifier</artifactId>
+                <version>${elegent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.elegent.security</groupId>
+                <artifactId>elegent-security-verifier-web</artifactId>
+                <version>${elegent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.elegent.security</groupId>
+                <artifactId>elegent-security-token</artifactId>
+                <version>${elegent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.elegent.security</groupId>
+                <artifactId>elegent-security-annotation</artifactId>
+                <version>${elegent.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>cn.elegent.security</groupId>
+                <artifactId>elegent-security-context</artifactId>
+                <version>${elegent.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>compile</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+                <scope>compile</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+        </dependencies>
+
+
+    </dependencyManagement>
+
+
+
+
+    <build>
+        <plugins>
+            <!--source-->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+<!--            &lt;!&ndash;javadoc&ndash;&gt;-->
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <charset>UTF-8</charset>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- gpg plugin,用于签名认证 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- release plugin,用于发布到release仓库部署插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

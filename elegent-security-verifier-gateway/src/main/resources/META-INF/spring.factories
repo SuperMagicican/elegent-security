@@ -1,0 +1,3 @@
+ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+   cn.elegent.security.verifier.gateway.filter.TokenFilter,\
+   cn.elegent.security.verifier.gateway.config.GatewayVeriferConfigurer

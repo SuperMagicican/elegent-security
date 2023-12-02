@@ -1,0 +1,26 @@
+elegent:
+  security:
+    login-strategies:
+      - type: admin
+        strategy: username_password
+        secret-key: elegent
+        ttl: 2
+        refresh-key: refreshElegent
+        refresh-ttl: 200
+      - type: user
+        strategy: mobile_code
+        secret-key: elegent
+        ttl: 2
+    verifier:
+      header:
+        type: login-type
+        token: user-token
+      ignore-url:  # 忽略地址，不用登录也可以访问的地址
+        - POST/login
+        - POST/logout
+      privilege-url: #特权地址，所有登录用户都可以访问的地址
+        - GET/user/list
+        - GET/goods/list
+      privilege-user:
+        - admin
+

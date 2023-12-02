@@ -1,0 +1,3 @@
+ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+   cn.elegent.security.annotation.noauth.DefaultElegentNoAuthResponse,\
+   cn.elegent.security.annotation.aspect.JSR250Aspect
